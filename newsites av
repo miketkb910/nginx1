@@ -1,0 +1,13 @@
+upstream web1 {
+      server localhost:8443;
+}
+
+server {
+   location / {
+      server_name ;
+      listen 443;
+      
+      proxy_pass http://web1;
+      }
+   }
+}
